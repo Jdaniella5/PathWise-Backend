@@ -12,6 +12,9 @@ dotenv.config();
 
 const app = express();
 
+app.set('trust proxy', 1);
+
+
 // Connect to MongoDB
 connectDB();
 
@@ -29,4 +32,8 @@ app.use("/api/users", userRoutes);
 const PORT = process.env.PORT || 1180;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
+});
+
+app.get('/', (req, res) => {
+  res.send('PathWise Backend API is running 🚀');
 });
