@@ -1,0 +1,14 @@
+# Ignore node modules
+node_modules/
+
+# Ignore environment files
+.env
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+cd Signtel-b
