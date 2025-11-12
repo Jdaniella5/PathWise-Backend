@@ -18,9 +18,16 @@ app.set('trust proxy', 1);
 // Connect to MongoDB
 connectDB();
 
+app.use(
+  cors({
+    origin: ["https://path-wise-test.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true, 
+  })
+);
+
 app.use(express.json());
 app.use(helmet());
-app.use(cors());
 app.use(morgan("dev"));
 
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
