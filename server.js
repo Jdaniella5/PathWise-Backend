@@ -20,7 +20,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["https://path-wise-test.vercel.app"],
+    origin: ["https://path-wise-ai-test.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true, 
   })
