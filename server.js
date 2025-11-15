@@ -14,11 +14,12 @@ app.set('trust proxy', 1);
 connectDB();
 app.use(
 cors({
-origin: ['https://path-wise-ai-test.vercel.app'],
+origin: ['https://path-wise-ai-test.vercel.app', 'http://localhost:5173'],
 methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 credentials: true,
 })
 );
+
 
 app.use(
 cors({
