@@ -36,7 +36,7 @@ app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 //routes
 app.use('/api/users', userRoutes);
 //connection
-const PORT = process.env.PORT || 1180;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
 console.log(`Server running on port ${PORT}`);
 });
